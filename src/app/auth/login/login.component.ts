@@ -16,11 +16,9 @@ export class LoginComponent {
   onSubmit(): void {
     this.authService.login(this.username, this.password).subscribe(user => {
       if (user.length) {
-        console.log('Login successful!', user);
-        this.router.navigate(['/players']);
-        // Vous pouvez ici rediriger l'utilisateur ou stocker ses informations
+        this.router.navigate(['/player-list']);
       } else {
-        console.log('Login failed!');
+        alert('Invalid credentials');
       }
     });
   }

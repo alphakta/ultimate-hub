@@ -13,11 +13,9 @@ export class RegisterComponent {
 
   onSubmit(formData: any): void {
     this.authService.register(formData).subscribe(response => {
-      console.log('User registered!', response);
-      // Rediriger l'utilisateur vers la page de login ou une autre page
       this.router.navigate(['/login']);
     }, error => {
-      console.log('Registration failed', error);
+      alert(error);
     });
   }
 }
