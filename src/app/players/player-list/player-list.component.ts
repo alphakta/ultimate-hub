@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppRoutingModule } from "../../app-routing.module";
-import { Router } from "@angular/router";
 import { DataService } from "../../services/data.service";
 import { Player } from "../../models/player";
-import { Observable } from "rxjs";
 import { PageEvent } from '@angular/material/paginator';
 
 @Component({
