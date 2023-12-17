@@ -17,6 +17,7 @@ import { LoaderComponent } from './loader/loader.component';
 import {NgOptimizedImage} from "@angular/common";
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginatorModule } from '@angular/material/paginator'
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     NgOptimizedImage,
     BrowserAnimationsModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
