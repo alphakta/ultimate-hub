@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CustomPipe } from './shared/custom.pipe';
-import { CustomDirective } from './shared/custom.directive';
+import { HoverCardDirective } from './shared/hover-card.directive';
 import { PlayerListComponent } from './players/player-list/player-list.component';
 import { PlayerDetailComponent } from './players/player-detail/player-detail.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,7 +22,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     LoginComponent,
     RegisterComponent,
     CustomPipe,
-    CustomDirective,
+    HoverCardDirective,
     PlayerListComponent,
     PlayerDetailComponent,
     PlayerCardComponent,
