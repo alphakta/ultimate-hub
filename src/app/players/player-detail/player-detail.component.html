@@ -1,42 +1,47 @@
-<div class="row mt-4 mx-4">
-  <div class="col">
-    <h1 class="text-center">Détail du joueur</h1>
+<div class="player-detail-container">
+  <h1 class="Title">Player Details</h1>
+  <app-loader *ngIf="!player && !imagesLoaded"></app-loader>
+  <div *ngIf="player && imagesLoaded" class="player-detail">
+   
+<div class="player-card">
 
-    <div class="row mt-4 mx-4" *ngIf="!player && !imagesLoaded">
-      <app-loader></app-loader>
+  <div class="player-image-container">
+    <img [src]="this.playerImageUrl" alt="Photo of {{ player.firstName }} {{ player.lastName }}" class="player-photo">
+    <div class="badges-container">
+      <img [src]="this.playerNationalityImageUrl" alt="Nationality flag" class="nationality-badge">
+      <img [src]="this.playerClubImageUrl" alt="Club badge" class="club-badge">
     </div>
-    
-    <div class="row mt-4 mx-4" *ngIf="player && imagesLoaded">
-      <div>{{player.firstName}}</div>
-      <div>{{player.lastName}}</div>
-      <div>{{player.position}}</div>
-      <div>{{player.rating}}</div>
-      <div>{{player.foot}}</div>
-      <div>{{player.height}}</div>
-      <div>{{player.weight}}</div>
-      <div>{{player.age}}</div>
-      <div>{{player.birthDate | date:"dd/MM/yyyy" }}</div>
-      <div>{{player.workRate.attack}}</div>
-      <div>{{player.workRate.defense}}</div>
-      <div>{{player.weakFoot}}</div>
-      <div>{{player.skillMoves}}</div>
-      <div>{{player.rating}}</div>
-      <div>{{player.color}}</div>
-      <div>{{player.stats.pace}}</div>
-      <div>{{player.stats.shooting}}</div>
-      <div>{{player.stats.passing}}</div>
-      <div>{{player.stats.dribbling}}</div>
-      <div>{{player.stats.defending}}</div>
-      <div>{{player.stats.physicality}}</div>
-
-      <div> {{player.idClub}}</div>
-      <div> {{player.idNationality}}</div>
-
-      <img [src]="this.playerImageUrl" alt="">
-      <img [src]="this.playerClubImageUrl" alt="">
-      <img [src]="this.playerNationalityImageUrl" alt="">
-
+  <div class="player-info">
+    <h2 class="player-name">{{ player.firstName }} {{ player.lastName }}</h2>
+    <div class="player-position-rating">
+      <span class="position">{{ player.position }}</span>
+      <span class="rating">Rating : {{ player.rating }}</span>
     </div>
+    <ul class="player-attributes">
+      <li><strong>Height:</strong> {{ player.height }} cm</li>
+      <li><strong>Foot:</strong> {{ player.foot }}</li>
+      <li><strong>Weight:</strong> {{ player.weight }} kg</li>
+      <li><strong>Age:</strong> {{ player.age }}</li>
+      <li><strong>Birthdate:</strong> {{ player.birthDate | date:"MM/dd/yyyy" }}</li>
+      <li><strong>Attack Work Rate:</strong> {{ player.workRate.attack }}</li>
+      <li><strong>Defense Work Rate:</strong> {{ player.workRate.defense }}</li>
+      <li><strong>Weak Foot:</strong> {{ player.weakFoot }}</li>
+      <li><strong>Skill Moves:</strong> {{ player.skillMoves }}</li>
+      <li><strong>Overall Rating:</strong> {{ player.rating }}</li>
+      <li><strong>Color:</strong> {{ player.color }}</li>
+      <li><strong>Pace:</strong> {{ player.stats.pace }}</li>
+      <li><strong>Shooting:</strong> {{ player.stats.shooting }}</li>
+      <li><strong>Passing:</strong> {{ player.stats.passing }}</li>
+      <li><strong>Dribbling:</strong> {{ player.stats.dribbling }}</li>
+      <li><strong>Defending:</strong> {{ player.stats.defending }}</li>
+      <li><strong>Physicality:</strong> {{ player.stats.physicality }}</li>
+      <li><strong>Club ID:</strong> {{ player.idClub }}</li>
+      <li><strong>Nationality ID:</strong> {{ player.idNationality }}</li>
+    </ul>
   </div>
 </div>
+
+  </div>
+</div>
+
 
