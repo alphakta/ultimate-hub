@@ -1,7 +1,6 @@
 <!-- register.component.html -->
+<div class="register-wrapper">
 <div class="register-container">
-<p>register works!</p>
-
     <form (ngSubmit)="onSubmit(registerForm.value)" #registerForm="ngForm">
       <h2>User Registration</h2>
       
@@ -21,6 +20,7 @@
       </div>
   
       <button type="submit" [disabled]="!registerForm.valid">Register</button>
+      <a href="/login" class="existing-account">Already Have An Account ?</a>
     </form>
   </div>
-  
+</div>

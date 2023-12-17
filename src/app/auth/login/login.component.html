@@ -1,16 +1,25 @@
-<div class="login-container">
-<p>login works!</p>
-
+<!-- login.component.html -->
+<div class="login-wrapper">
+  <div class="login-container">
+    <h2>Welcome Back!</h2>
     <form (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" [(ngModel)]="username" name="username" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="username" name="email" required>
       </div>
+      
       <div class="form-group">
         <label for="password">Password</label>
         <input type="password" id="password" [(ngModel)]="password" name="password" required>
       </div>
+      
+      <div class="error-message">
+        <!-- Conditionally display error message -->
+      </div>
+      
       <button type="submit">Login</button>
+      
+      <a href="#" class="forgot-password">Forgot Password?</a>
     </form>
   </div>
-  
+</div>
