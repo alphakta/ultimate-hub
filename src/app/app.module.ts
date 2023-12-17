@@ -9,13 +9,14 @@ import { CustomPipe } from './shared/custom.pipe';
 import { HoverCardDirective } from './shared/hover-card.directive';
 import { PlayerListComponent } from './players/player-list/player-list.component';
 import { PlayerDetailComponent } from './players/player-detail/player-detail.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlayerCardComponent } from './players/player-list/player-card/player-card.component';
 import { LoaderComponent } from './loader/loader.component';
 import {NgOptimizedImage} from "@angular/common";
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     PlayerDetailComponent,
     PlayerCardComponent,
     LoaderComponent,
-    HeaderComponent
+    HeaderComponent,
+    ForgotPasswordComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     FormsModule,
@@ -37,7 +40,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HttpClientModule,
     NgOptimizedImage,
     BrowserAnimationsModule,
-    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
